@@ -5,28 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
+  <header>
+    <img src="./images/logo.svg" alt="logo">
+    <button
+      class="btn-menu"
+    >
+      <img src="./images/icon-menu.svg" alt="menu icon" class="icon-menu">
+    </button>
+    <div
+      class="menu"
+    >
+      <div>
+        Features
+      </div>
+      <div>
+        Company
+      </div>
+      <div>
+        Careers
+      </div>
+      <div>
+        About
+      </div>
+      <button
+        class="btn-login"
+      >
+        Login
+      </button>
+      <button
+        class="btn-register"
+      >
+        Register
+      </button>
+    </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </header>
+  <main>
+    <img src="./images/image-hero-mobile.png" alt="image hero mobile" class="img-hero-mobile">
+    <img src="./images/image-hero-desktop.png" alt="image hero desktop" class="img-hero-desktop">
+    <div class="title-element">
+      <h1
+        class="title"
+      >
+        Make remote work
+      </h1>
+    </div>
+    <div class="desc">
+      <p
+        class="description"
+      >
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.
+      </p>
+    </div>
+    <div class="learn-more">
+      <button
+        class="btn-learn-more"
+      >
+        Learn more
+      </button>
+    </div>
+    <div class="client">
+      <div class="client-databiz"></div>
+      <div class="client-audiophile"></div>
+      <div class="client-meet"></div>
+      <div class="client-maker"></div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/djenidisimple">Djenidi</a>.
+    </div>
+  </footer>
 </body>
 </html>
