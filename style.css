@@ -1,11 +1,8 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-.menu {
-    display: none;
-}
 :root {
     --gray-50: hsl(0, 0%, 98%);
-    --gray-500: hsl(0, 0%, 41%);
+    --gray-500: rgb(105, 105, 105);
     --gray-950: hsl(0, 0%, 8%);
 }
 @font-face {
@@ -19,14 +16,73 @@
     font-family: 'Epilogue', sans-serif;
     overflow-x: hidden;
 }
+html {
+    height: 100%;
+}
 body {
+    position: relative;
+    height: 100%;
     font-size: 18px;
 }
 header {
-    padding: 20px;
+    padding: 15px;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
+}
+.w-full {
+    width: 100%;
+}
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 42, 42, 0.8);
+}
+.menu {
+    font-size: 16px;
+    height: 100%;
+    position: absolute;
+    width: 240px;
+    right: 0;
+    padding: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+    background-color: var(--gray-50);
+    color: var(--gray-500);
+}
+.list-menu {
+    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--gray-500);
+    font-size: 15px;
+    line-height: 10px;
+}
+.link img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.link-2 {
+    display: block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: var(--gray-500);
+}
+.link:hover, .link-2:hover {
+    width: 100%;
+    color: var(--gray-950);
 }
 .btn-menu {
     width: 35px;
@@ -35,6 +91,48 @@ header {
     cursor: pointer;
     float: right;
     overflow: hidden;
+}
+.btn-close {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    float: right;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.btn-link {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: var(--gray-500);
+    cursor: pointer;
+    text-align: left;
+}
+.btn-link img {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.btn-login {
+    width: 100%;
+    padding: 10px 45px;
+    border: none;
+    background: none;
+    color: var(--gray-500);
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-register {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--gray-500);
+    border-radius: 12px;
+    background: none;
+    color: var(--gray-500);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 .icon-menu {
     width: 100%;
@@ -62,14 +160,14 @@ header {
     margin-bottom: 50px;
 }
 .description {
-    font-size: 16px;
+    text-indent: 18px;
     color: var(--gray-500);
     text-align: center;
     margin-top: 20px;
     line-height: 1.5;
 }
 .desc {
-    padding: 0 10px;
+    padding: 0 5px;
 }
 .btn-learn-more {
     padding: 15px 25px;
@@ -116,4 +214,9 @@ footer {
     padding: 20px;
     background-color: var(--gray-50);
     text-align: center;
+}
+@media screen and (min-width: 1024px) {
+    .btn-menu , .img-hero-mobile {
+        display: none;
+    }
 }
