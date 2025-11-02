@@ -122,6 +122,7 @@ header {
     color: var(--gray-500);
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
 }
 .btn-register {
     width: 100%;
@@ -133,6 +134,10 @@ header {
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
+    text-decoration: none;
+}
+.btn-login:hover, .btn-register:hover, .btn-link:hover {
+    color: var(--gray-950);
 }
 .icon-menu {
     width: 100%;
@@ -224,6 +229,12 @@ footer {
     background-color: var(--gray-50);
     text-align: center;
 }
+.center {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
 @media screen and (min-width: 1024px) {
     .container {
         display: grid;
@@ -260,7 +271,23 @@ footer {
         text-indent: 0;
         text-align: left;
     }
+    header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 5vw;
+    }
+    .logo {
+        vertical-align: middle;
+    }
     .nav-menu-destkop {
         display: block;
+        width: 88%;
+        height: auto;
+        padding: 1em;
+    }
+    .float-right {
+        float: right;
     }
 }
