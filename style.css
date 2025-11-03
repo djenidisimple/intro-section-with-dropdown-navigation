@@ -32,6 +32,11 @@ header {
     justify-content: space-between;
     overflow: hidden;
 }
+main {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 .w-full {
     width: 100%;
 }
@@ -116,28 +121,32 @@ header {
 }
 .btn-login {
     width: 100%;
-    padding: 10px 45px;
-    border: none;
+    padding: 10px 20px;
     background: none;
+    border: none;
     color: var(--gray-500);
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
+    text-align: center;
 }
 .btn-register {
     width: 100%;
-    padding: 10px;
-    border: 1px solid var(--gray-500);
+    padding: 10px 20px;
+    border: 2px solid var(--gray-500);
     border-radius: 12px;
     background: none;
     color: var(--gray-500);
     font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
     text-decoration: none;
+    text-align: center;
 }
 .btn-login:hover, .btn-register:hover, .btn-link:hover {
     color: var(--gray-950);
+}
+.btn-register:hover {
+    border: 2px solid var(--gray-950);
 }
 .icon-menu {
     width: 100%;
@@ -238,30 +247,34 @@ footer {
 @media screen and (min-width: 1024px) {
     .container {
         display: grid;
-        grid-template-columns: 30vw 1fr;
-        padding-left: 120px;
-        padding-right: 120px;
-        column-gap: 10vw;
+        grid-template-columns: 50% 50%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        margin-top: 5vh;
     }
     .img-hero {
+        display: flex;
+        justify-content: center;
         grid-column: 2;
         grid-row: 1;
     }
     .title-element {
         grid-column: 1;
         grid-row: 1;
+        padding: 4em;
     }
     .btn-menu , .img-hero-mobile {
         display: none;
     }
     .img-hero-desktop {
         display: block;
-        width: 26vw;
-        height: auto;
+        width: 30vw;
+        height: 80vh;
     }
     .title {
+        width: 30vw;
         text-align: left;
-        font-size: 52px;
+        font-size: 4.5vw;
     }
     .learn-more {
         display: flex;
@@ -271,12 +284,17 @@ footer {
         text-indent: 0;
         text-align: left;
     }
+    .desc {
+        width: 30vw;
+    }
     header {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        flex-wrap: wrap;
         column-gap: 5vw;
+        padding-top: 15px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
     .logo {
         vertical-align: middle;
@@ -284,10 +302,15 @@ footer {
     .nav-menu-destkop {
         display: block;
         width: 88%;
-        height: auto;
-        padding: 1em;
+        height: 40px;
     }
     .float-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 15vw;
+        height: 40px;
         float: right;
     }
 }
