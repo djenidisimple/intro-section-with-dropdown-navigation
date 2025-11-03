@@ -23,6 +23,7 @@ body {
     position: relative;
     height: 100%;
     font-size: 18px;
+    background-color: var(--gray-50);
 }
 header {
     padding: 15px;
@@ -31,6 +32,7 @@ header {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    box-sizing: border-box;
 }
 main {
     box-sizing: border-box;
@@ -133,7 +135,7 @@ main {
 .btn-register {
     width: 100%;
     padding: 10px 20px;
-    border: 2px solid var(--gray-500);
+    border: 1px solid var(--gray-500);
     border-radius: 12px;
     background: none;
     color: var(--gray-500);
@@ -146,7 +148,7 @@ main {
     color: var(--gray-950);
 }
 .btn-register:hover {
-    border: 2px solid var(--gray-950);
+    border: 1px solid var(--gray-950);
 }
 .icon-menu {
     width: 100%;
@@ -238,11 +240,11 @@ footer {
     background-color: var(--gray-50);
     text-align: center;
 }
-.center {
+.align-menu {
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 @media screen and (min-width: 1024px) {
     .container {
@@ -265,6 +267,9 @@ footer {
     }
     .btn-menu , .img-hero-mobile {
         display: none;
+    }
+    .btn-link, .btn-login, .btn-register {
+        font-size: 15px;
     }
     .img-hero-desktop {
         display: block;
@@ -290,27 +295,68 @@ footer {
     header {
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         column-gap: 5vw;
-        padding-top: 15px;
+        margin-top: 25px;
+        padding: 0;
         padding-left: 40px;
         padding-right: 40px;
     }
-    .logo {
-        vertical-align: middle;
-    }
     .nav-menu-destkop {
         display: block;
-        width: 88%;
-        height: 40px;
+        width: 95%;
+        height: 100%;
+    }
+    .feature-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        height: 100%;
+    }
+    .feature-menu > .center {
+        padding-top: 5px;
+    }
+    .list-menu {
+        background-color: white;
+        margin: 0;
+        padding: 15px 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+    .drop-down button {
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    .btn-feature {
+        text-align: right;
+    }
+    .drop-down {
+        display: flex;
+        flex-direction: column;
+        column-gap: 50px;
+    }
+    .link {
+        font-size: 14px;
+        margin: 0;
+        padding: 8px;
+    }
+    .link img {
+        width: 12px;
+        height: auto;
     }
     .float-right {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        align-items: center;
-        width: 15vw;
-        height: 40px;
-        float: right;
+        align-items: start;
+        width: 18vw;
+        height: auto;
+        padding: 0;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
