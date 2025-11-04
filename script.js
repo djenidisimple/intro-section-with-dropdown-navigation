@@ -5,12 +5,12 @@
 let btnMenu = document.querySelector('.btn-menu');
 let btnClose = document.querySelector('.btn-close');
 let navMenu = document.querySelector('.nav-menu');
-let btnLink = document.querySelectorAll('.btn-link');
+let btnDropDown = document.querySelectorAll('#btn-drop-down');
 let listMenu = document.querySelectorAll(".list-menu");
 let dropDown = document.querySelectorAll('.drop-down')
 let iconArrow = document.querySelectorAll('.icon-arrow')
 
-btnLink.forEach((btn, index) => {
+btnDropDown.forEach((btn, index) => {
   btn.addEventListener('click', (event) => {
     event.stopPropagation();
     if (listMenu[index].style.display == 'none' || !listMenu[index].style.display) {
