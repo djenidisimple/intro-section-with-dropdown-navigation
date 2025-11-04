@@ -64,6 +64,7 @@ main {
     color: var(--gray-500);
 }
 .list-menu {
+    display: none;
     margin: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -116,6 +117,7 @@ main {
     color: var(--gray-500);
     cursor: pointer;
     text-align: left;
+    margin-bottom: 2vh;
 }
 .btn-link img {
     margin-left: 5px;
@@ -242,16 +244,15 @@ footer {
 }
 .align-menu {
     display: flex;
-    gap: 20px;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 @media screen and (min-width: 1024px) {
     .container {
         display: grid;
         grid-template-columns: 50% 50%;
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
         margin-top: 5vh;
     }
     .img-hero {
@@ -264,12 +265,17 @@ footer {
         grid-column: 1;
         grid-row: 1;
         padding: 4em;
+        padding-top: 5em;
     }
     .btn-menu , .img-hero-mobile {
         display: none;
     }
     .btn-link, .btn-login, .btn-register {
         font-size: 15px;
+    }
+    .btn-link {
+        padding-left: 50px;
+        text-align: right;
     }
     .img-hero-desktop {
         display: block;
@@ -295,8 +301,7 @@ footer {
     header {
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
-        column-gap: 5vw;
+        align-items: center;
         margin-top: 25px;
         padding: 0;
         padding-left: 40px;
@@ -310,7 +315,7 @@ footer {
     .feature-menu {
         display: flex;
         justify-content: space-between;
-        align-items: start;
+        align-items: center;
         height: 100%;
     }
     .feature-menu > .center {
@@ -320,6 +325,8 @@ footer {
         display: none;
         background-color: white;
         margin: 0;
+        position: absolute;
+        top: 9vh;
         padding: 15px 20px;
         padding-left: 15px;
         padding-right: 15px;
@@ -328,7 +335,6 @@ footer {
     }
     .drop-down button {
         display: block;
-        width: 100%;
         margin: 0;
         margin-bottom: 15px;
     }
@@ -338,7 +344,8 @@ footer {
     .drop-down {
         display: flex;
         flex-direction: column;
-        column-gap: 50px;
+        align-items: center;
+        padding-top: 2vh;
     }
     .link {
         font-size: 14px;
