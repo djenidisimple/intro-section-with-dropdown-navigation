@@ -5,29 +5,40 @@
 let btnMenu = document.querySelector('.btn-menu');
 let btnClose = document.querySelector('.btn-close');
 let navMenu = document.querySelector('.nav-menu');
-let btnFeature = document.querySelector('.btn-feature');
-let btnCompany = document.querySelector('.btn-company');
-let dropDown = document.querySelector('.drop-down');
-let listMenu = document.querySelector('.list-menu');
-let items2 = document.querySelector('.items-2');
+let btnLink = document.querySelectorAll('.btn-link');
+let listMenu = document.querySelectorAll(".list-menu");
+let dropDown = document.querySelectorAll('.drop-down')
+let iconArrow = document.querySelectorAll('.icon-arrow')
 
-// btnMenu.addEventListener('click', () => {
-//   navMenu.style.display = 'block';
-// });
+btnLink.forEach((btn, index) => {
+  btn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (listMenu[index].style.display == 'none' || !listMenu[index].style.display) {
+      listMenu[index].style.display = 'block';
+      listMenu[index > 0 ? index - 1 : index + 1].style.display = 'none';
+      iconArrow[index].src = "./images/icon-arrow-up.svg"
+    } else {
+      listMenu[index].style.display = 'none';
+      iconArrow[index].src = "./images/icon-arrow-down.svg"
+    }
+  })
+})
 
-dropDown.addEventListener('mouseover', () => {
-  listMenu.style.display = 'block';
+document.addEventListener('click', () => {
+  listMenu.forEach(menu => {
+    menu.style.display = 'none';
+  });
 });
-dropDown.addEventListener('mouseout', () => {
-  listMenu.style.display = 'none';
+
+listMenu.forEach(menu => {
+  menu.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
 });
 
-// btnCompany.addEventListener('mouseover', () => {
-//   items2.style.display = 'block';
-// });
-// btnCompany.addEventListener('mouseout', () => {
-//   items2.style.display = 'none';
-// });
+btnMenu.addEventListener('click', () => {
+  navMenu.style.display = 'block';
+});
 
 btnClose.addEventListener('click', () => {
   navMenu.style.display = 'none';
